@@ -1,0 +1,164 @@
+# Multi-Blog Publishing Platform - Git Attributes
+# 파일별 동기화 및 병합 전략 설정
+
+# 텍스트 파일들
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.xml text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.java text eol=lf
+*.c text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.go text eol=lf
+*.rs text eol=lf
+*.php text eol=lf
+*.rb text eol=lf
+*.swift text eol=lf
+*.kt text eol=lf
+*.scala text eol=lf
+*.sql text eol=lf
+*.dockerfile text eol=lf
+Dockerfile text eol=lf
+*.dockerignore text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitconfig text eol=lf
+
+# 바이너리 파일들
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.rar binary
+*.7z binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.a binary
+*.o binary
+*.obj binary
+*.lib binary
+*.jar binary
+*.war binary
+*.ear binary
+*.class binary
+
+# 문서 파일들 - 병합 전략 설정
+README.md merge=union
+CHANGELOG.md merge=union
+CONTRIBUTING.md merge=union
+LICENSE merge=union
+*.md merge=union
+
+# 설정 파일들 - 병합 전략 설정
+package.json merge=union
+package-lock.json merge=union
+yarn.lock merge=union
+composer.json merge=union
+composer.lock merge=union
+Gemfile merge=union
+Gemfile.lock merge=union
+requirements.txt merge=union
+Pipfile merge=union
+Pipfile.lock merge=union
+Cargo.toml merge=union
+Cargo.lock merge=union
+go.mod merge=union
+go.sum merge=union
+pom.xml merge=union
+build.gradle merge=union
+settings.gradle merge=union
+
+# 워크플로우 파일들
+.github/workflows/*.yml merge=union
+.github/workflows/*.yaml merge=union
+
+# 스크립트 파일들
+scripts/*.sh text eol=lf
+scripts/*.py text eol=lf
+scripts/*.js text eol=lf
+
+# 환경 설정 파일들
+.env* text eol=lf
+*.env text eol=lf
+config/*.yml text eol=lf
+config/*.yaml text eol=lf
+config/*.json text eol=lf
+
+# 로그 파일들 (제외)
+*.log text eol=lf
+logs/* text eol=lf
+
+# 임시 파일들 (제외)
+*.tmp text eol=lf
+*.temp text eol=lf
+*.swp text eol=lf
+*.swo text eol=lf
+*~ text eol=lf
+
+# IDE 설정 파일들
+.vscode/settings.json text eol=lf
+.vscode/launch.json text eol=lf
+.vscode/tasks.json text eol=lf
+.idea/* text eol=lf
+
+# 운영체제별 파일들
+.DS_Store binary
+Thumbs.db binary
+desktop.ini binary
+
+# 언어별 특수 처리
+*.java diff=java
+*.c diff=cpp
+*.cpp diff=cpp
+*.h diff=cpp
+*.hpp diff=cpp
+*.py diff=python
+*.js diff=javascript
+*.ts diff=typescript
+*.css diff=css
+*.scss diff=scss
+*.html diff=html
+*.xml diff=xml
+*.sql diff=sql
+*.sh diff=shell
+*.yml diff=yaml
+*.yaml diff=yaml
+*.json diff=json
+
+# 큰 파일들 (Git LFS 사용)
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aac filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text

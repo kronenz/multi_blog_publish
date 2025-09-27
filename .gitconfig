@@ -1,0 +1,107 @@
+[core]
+    autocrlf = input
+    safecrlf = true
+    editor = nano
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[pull]
+    rebase = false
+    ff = only
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[alias]
+    sync-main = !bash scripts/sync-with-main.sh
+    sync = !git fetch origin && git merge origin/main
+    update = !git fetch origin && git rebase origin/main
+    conflicts = !git diff --name-only --diff-filter=U
+    resolve = !git add . && git commit -m "chore: Resolve merge conflicts"
+    
+[init]
+    defaultBranch = main
+
+[push]
+    default = current
+
+[branch]
+    autosetupmerge = true
+    autosetuprebase = false
+
+[rebase]
+    autoStash = true
+    autoSquash = true
+
+[rerere]
+    enabled = true
+
+[merge]
+    conflictstyle = diff3
+    tool = vimdiff
+
+[diff]
+    tool = vimdiff
+    colorMoved = default
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[log]
+    decorate = short
+    abbrevCommit = true
+    oneline = true
+
+[status]
+    showUntrackedFiles = all
+    submoduleSummary = true
+
+[submodule]
+    recurse = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+
+[gc]
+    auto = 256
+    autoPackLimit = 2
+    packrefs = true
+    prune = now
+
+[repack]
+    useDeltaBaseOffset = true
+    writeBitmaps = true
+
+[transfer]
+    fsckObjects = true
+    unpackLimit = 1
+
+[receive]
+    fsckObjects = true
+    denyNonFastForwards = false
+    denyDeletes = false
+
+[core]
+    precomposeUnicode = true
+    quotepath = false
+    ignorecase = false
+    filemode = true
+    symlinks = false
+    autocrlf = input
+    safecrlf = true
+    eol = lf
+    attributesfile = .gitattributes
+    hooksPath = .git/hooks
+    editor = nano
+    pager = less -FRX
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    preloadindex = true
+    fscache = true
+    untrackedCache = true
