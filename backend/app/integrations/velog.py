@@ -1,6 +1,6 @@
 from typing import Dict, Any
 from .base import BlogAdapter
-from app.models import PostCreate, PostUpdate
+from app.schemas import PostCreate, PostUpdate
 
 class VelogAdapter(BlogAdapter):
     """Adapter for interacting with the Velog API."""
